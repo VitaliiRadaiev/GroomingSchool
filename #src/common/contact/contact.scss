@@ -1,0 +1,96 @@
+.contact {
+    padding: 100px 0;
+
+    @media (max-width: $md3+px) {
+        padding: 50px 0;
+    }
+
+    & .head__title {
+        margin-bottom: 18px;
+    }
+
+    & .head__content {
+        @media (max-width: $md2+px) {
+            margin-left: 0;
+        }
+    }
+
+    &__body {
+        position: relative;
+    }
+
+    &__decor {
+        position: absolute;
+        top: 241px;
+        left: 11%;
+        z-index: 3;
+
+        @media (max-width: $md2+px) {
+            top: -50px;
+            right: 5px;
+            left: auto;
+        }
+
+        @media (max-width: $md3+px) {
+            & img {
+                width: 90px;
+            }
+        }
+
+        & img {
+            width: 112px;
+            height: auto;
+        }
+    }
+
+    &__list {
+        & > li {
+
+            align-items: center;
+            min-height: 92px;
+            padding: 20px 0;
+            border-bottom: 1px solid #5a5a5a;
+            font-size: 24px;
+            line-height: 125%;
+
+            @media (min-width: 768px) {
+                display: flex;
+            }
+
+            @media (max-width: $md4+px) {
+                font-size: 20px;
+                min-height: 72px;
+            }
+
+            & a {
+                color: $textColor;
+                transition: all 0.3s ease;
+
+                @media (min-width: 992px) {
+                    &:hover {
+                        color: $textLightColor;
+                    }
+                }
+
+                & span {
+                    color: $textLightColor;
+                }
+            }
+        }
+    }
+
+    &__label {
+        flex: 0 0 335px;
+        padding-right: 20px;
+
+        @media (max-width: $md1+px) {
+            flex: 0 0 220px;
+        }
+        @media (max-width: $md2+px) {
+            flex: 0 0 335px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 5px;
+        }
+    }
+}

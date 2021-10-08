@@ -30,7 +30,27 @@ window.addEventListener('load', function () {
 	@@include('../common/popup/popup.js');
 	@@include('../common/header/header.js');
 	@@include('../common/about/about.js');
+	@@include('../common/testimonials/testimonials.js');
+	@@include('../common/instagram/instagram.js');
 
+
+	let buttonsScrollTop = document.querySelectorAll('.btn-scroll-top');
+	if(buttonsScrollTop.length) {
+		buttonsScrollTop.forEach(btn => {
+			btn.addEventListener('click', () => {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				})
+			})
+		})
+	}
+
+	let wow = new WOW({
+		boxClass: '_anim',
+		offset: 4,
+	})
+	wow.init();
 });
 
 window.addEventListener('DOMContentLoaded', function() {

@@ -33,7 +33,7 @@
 
 // ==== PLAGINS ===========================================================================================
 @import "plagins/swiper-bundle";
-//@import "plagins/drift-basic";
+@import "plagins/animate";
 // ==== // PLAGINS ===========================================================================================
 
 // ==== FORM STYLE DEFAULT ===========================================================================================
@@ -245,13 +245,17 @@ textarea {
 	}
 
 	&__suptitle {
-		position: absolute;
+		
 		left: 0;
 		top: -5px;
 		font-weight: 500;
 		font-size: 18px;
 		line-height: 1.6667em;
 		text-transform: uppercase;
+
+		@media (min-width: 375px) {
+			position: absolute;
+		}
 	}
 
 	&__title {
@@ -267,7 +271,12 @@ textarea {
 }
 
 .content-wrap {
-	padding-left: 30px;
+	
+	@media (min-width: 375px) {
+		padding-left: 30px;
+
+	}
+
 	@media (min-width: 768px) {
 		padding-left: 50px;
 	}
@@ -404,6 +413,9 @@ button.btn-default {
 @import "../common/info-block/info-block";
 @import "../common/team/team";
 @import "../common/places/places";
+@import "../common/testimonials/testimonials";
+@import "../common/instagram/instagram";
+@import "../common/contact/contact";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================

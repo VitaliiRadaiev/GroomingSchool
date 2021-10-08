@@ -435,7 +435,62 @@ if(allPopup.length) {
 		})
     }
 };
+	{
+    let testimonials = document.querySelector('.testimonials');
+    if(testimonials) {
+        let sliderData = new Swiper(testimonials.querySelector('.testimonials__slider'), {
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
 
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoHeight: true,
+            speed: 800,
+            loop: true,
+            navigation: {
+                nextEl: testimonials.querySelector('.testimonials__slider-btn-next'),
+                prevEl: testimonials.querySelector('.testimonials__slider-btn-prev'),
+            },
+        });
+    }
+};
+	{
+    let instagramSlider = document.querySelector('.instagram__slider');
+    if(instagramSlider) {
+        
+let sliderData = new Swiper(instagramSlider, {
+	autoplay: {
+		delay: 1,
+		disableOnInteraction: false,
+	},
+	slidesPerView: 'auto',
+	spaceBetween: 0,
+	speed: 5000,
+    loop: true
+});
+    }
+};
+
+
+	let buttonsScrollTop = document.querySelectorAll('.btn-scroll-top');
+	if(buttonsScrollTop.length) {
+		buttonsScrollTop.forEach(btn => {
+			btn.addEventListener('click', () => {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				})
+			})
+		})
+	}
+
+	let wow = new WOW({
+		boxClass: '_anim',
+		offset: 4,
+	})
+	wow.init();
 });
 
 window.addEventListener('DOMContentLoaded', function() {

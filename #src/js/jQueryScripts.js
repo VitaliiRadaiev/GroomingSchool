@@ -1,3 +1,4 @@
+@@include('plagins/jquery.parallax.js');
 
 $( document ).ready(function() {
     $('img.img-svg').each(function(){
@@ -28,4 +29,9 @@ $( document ).ready(function() {
           return false;
         });
     }
+
+    	// ==== parallax =====================================================
+	$('._parallax').parallax();
+	// ==== parallax =====================================================
+
 });

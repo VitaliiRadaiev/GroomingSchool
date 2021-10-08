@@ -1,0 +1,124 @@
+.testimonials {
+    padding: 100px 0;
+
+    @media (max-width: $md3+px) {
+        padding: 50px 0;
+    }
+
+    &__decor {
+        position: absolute;
+        z-index: 3;
+        left: 59%;
+        bottom: -105px;
+
+        @media (max-width: $md3+px) {
+            left: auto;
+            right: 5px;
+            & img {
+                width: 100px;
+            }
+        }
+
+        & img {
+            width: 168px;
+            height: auto;
+        }
+    }
+
+    & .head__title {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__body {
+        position: relative;
+    }
+
+    &__slider-controls {
+        display: flex;
+    }
+
+    &__slider-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 42px;
+        width: 42px;
+        padding: 10px;
+
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__slider-btn-prev {
+        margin-right: 28px;
+    }
+
+    &__slider-btn-next {
+    }
+
+    &__slider {
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__item {
+
+        padding: 50px 0;
+        border-bottom: 1px solid #545a5c;
+        &:first-child {
+            padding-top: 0;
+        }
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
+        @media (max-width: $md3+px) {
+            padding: 25px 0;
+        }
+    }
+
+    &__item-col-1 {
+        flex: 0 0 300px;
+        padding-right: 25px;
+    }
+
+    &__item-col-2 {
+        flex: 1 1 auto;
+    }
+
+    &__item-name {
+        font-size: 24px;
+        line-height: 133%;
+        color: $textLightColor;
+        margin-bottom: 15px;
+    }
+
+    &__item-text {
+        &.text-content {
+            font-size: 16px;
+            line-height: 150%;
+            & p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
