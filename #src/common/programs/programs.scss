@@ -1,0 +1,116 @@
+.programs {
+    padding-bottom: 100px;
+
+    @media (max-width: $md3+px) {
+        padding-bottom: 25px;
+    }
+
+    &__decor-1 {
+        position: absolute;
+        top: -37px;
+        right: 89px;
+
+        @media (max-width: $md3+px) {
+            top: -12px;
+            right: -10px;
+            & img {
+                width: 140px;
+            }
+        }
+
+        @media (max-width: $md4+px) {
+            & img {
+                width: 75px;
+            }
+        }
+
+        & img {
+            width: 214px;
+            height: auto;
+        }
+    }
+    &__decor-2 {
+        position: absolute;
+        top: 81%;
+        left: 21px;
+
+        @media (max-width: $md3+px) {
+            top: 92%;
+            left: -59px;
+
+            & img {
+                width: 120px;
+            }
+        }
+
+        & img {
+            width: 168px;
+            height: auto;
+        }
+    }
+
+    & .head__title {
+        margin-bottom: 14px;
+    }
+
+    &__list {
+        & > li {
+            border-bottom: 2px solid #545a5c;
+        }
+    }
+
+    &__list-item {
+        min-height: 102px;
+        display: flex;
+        align-items: center;
+        padding: 25px 0;
+        transition: all 0.3s ease;
+        font-size: 32px;
+        line-height: 1em;
+        color: $textLightColor;
+        padding-right: 45px;
+        position: relative;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba(#fff, 0.2);
+            }
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 13px;
+            height: 23px;
+            right: 14.5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url($chevronRight);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        & > span {
+            flex: 0 0 auto;
+            min-width: 85px;
+            padding-right: 15px;
+            color: $textColor;
+        }
+
+        @media (max-width: $md4+px) {
+            font-size: 18px;
+            min-height: 60px;
+
+            & > span {
+                padding-right: 10px;
+                min-width: 30px;
+            }
+
+            &::before {
+                width: 9px;
+            }
+        }
+    }
+}

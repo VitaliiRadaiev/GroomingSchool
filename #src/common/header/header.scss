@@ -1,0 +1,211 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 49;
+    transition: box-shadow 0.4s ease;
+    background-color: $bg;
+
+    &.is-scroll {
+        box-shadow: 0 0 20px rgba(#fff, 0.1);
+        & .header__body {
+            min-height: 75px;
+            &:before {
+                width: 100vw;
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        min-height: 100px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.125em;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $textLightColor;
+        position: relative;
+        transition: all 0.4s ease;
+
+        &:before {
+            position: absolute;
+            content: "";
+            left: 50%;
+            bottom: 0;
+            width: calc(100% - 80px);
+            height: 1px;
+            background-color: #545a5c;
+            transform: translateX(-50%);
+            transition: all 0.4s ease;
+            @media (max-width: 374.98px) {
+                width: calc(100% - 30px);
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            min-height: 75px;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 210px;
+        margin-right: 20px;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: $md2+px) {
+            margin-right: auto;
+            max-width: 160px;
+        }
+    }
+
+    &__menu {
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-width: $md2+px) {
+            display: none;
+        }
+    }
+
+    &__burger {
+        margin-left: 20px;
+    }
+
+    &__phone {
+        margin-left: 15px;
+        color: $textLightColor;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        & img {
+            flex: 0 0 auto;
+            width: 18px;
+            height: auto;
+            margin-right: 5px;
+        }
+
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+
+    &__language {
+        margin-left: 35px;
+
+        @media (max-width: $md3+px) {
+            margin-left: 20px;
+        }
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+
+        & > li {
+        }
+    }
+
+    &__link {
+        padding: 7.5px;
+        transition: all 0.3s ease;
+        color: $textLightColor;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba(#fff, 0.2);
+            }
+        }
+    }
+}
+
+.burger-wrap {
+    display: flex;
+    align-items: center;
+    color: $textLightColor;
+}
+.burger {
+    flex: 0 0 18px;
+    margin-right: 5px;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.language {
+    margin-right: -7.5px;
+    position: relative;
+
+    &:hover {
+        & .language__title {
+            background-color: rgba(#fff, 0.2);
+        }
+
+        & .language__list {
+            display: block;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        padding: 7.5px;
+        transition: all 0.3s ease;
+        &:after {
+            content: "";
+            display: inline-block;
+            height: 18px;
+            width: 18px;
+            background-image: url($chevronDown);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-left: 1px;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: 100%;
+        min-width: 100%;
+        background-color: #fff;
+        display: none;
+        animation: lngSlideUp 0.3s ease;
+
+        & a {
+            color: $mainColor;
+            padding: 7.5px;
+            transition: all 0.3s ease;
+            display: block;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    background-color: rgba($mainColor, 0.2);
+                }
+            }
+        }
+    }
+}
+
+@keyframes lngSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

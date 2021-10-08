@@ -1,0 +1,120 @@
+.places {
+    padding: 100px 0;
+
+    @media (max-width: $md3+px) {
+        padding: 25px 0;
+    }
+
+    & .head__title {
+    }
+
+    &__text {
+        &.text-content {
+            font-size: 16px;
+            line-height: 150%;
+        }
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        margin: 0 -10px;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
+        & > li {
+            padding: 0 10px;
+            flex: 0 1 50%;
+
+            @media (min-width: 992px) {
+                &:nth-child(2) {
+                    & .places__list-card-content {
+                        padding-bottom: 9px;
+                    }
+                }
+            }
+
+            @media (max-width: $md3+px) {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    &__list-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 350px;
+        position: relative;
+    }
+
+    &__list-card-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: linear-gradient(180deg, rgba(37, 37, 37, 0) 0%, #343434 100%);
+        }
+    }
+
+    &__list-card-content {
+        position: relative;
+        z-index: 2;
+        padding: 43px 30px 23px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       // flex-wrap: wrap;
+
+        & > * {
+            margin-bottom: 20px;
+        }
+
+        & .btn-default {
+            white-space: nowrap;
+        }
+
+        @media (max-width: $md2+px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @media (max-width: $md3+px) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        @media (max-width: 575.98px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__list-card-logo {
+        width: 100%;
+        max-width: 156px;
+        max-height: 76px;
+        margin-right: 20px;
+
+        & img {
+            max-height: 100%;
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+    }
+}

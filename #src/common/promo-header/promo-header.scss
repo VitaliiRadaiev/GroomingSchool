@@ -1,0 +1,99 @@
+.promo-header {
+    padding-bottom: 110px;
+
+    @media (max-width: $md3+px) {
+        padding-bottom: 25px;
+    }
+    &__content {
+        position: relative;
+    }
+
+    &__decor {
+        position: absolute;
+        z-index: 4;
+        right: 126px;
+        bottom: -160px;
+
+        @media (max-width: $md3+px) {
+            right: -26px;
+            bottom: -63px;
+        }
+    }
+
+    &__decor-img {
+        & img {
+           width: 84px;
+           height: auto; 
+
+           @media (max-width: $md3+px) {
+               width: 50px;
+           }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: calc(100% - 110px);
+        z-index: 1;
+
+        @media (max-width: $md3+px) {
+            left: 50%;
+            width: 100vw;
+            transform: translateX(-50%);
+            height: calc(100% - 80px);
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#252525, 0.05);
+            z-index: 2;
+        }
+    }
+
+    &__body {
+        min-height: 610px;
+        padding: 43px 40px 50px;
+        width: 100%;
+        max-width: 1060px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        color: $textLightColor;
+
+        @media (max-width: $md3+px) {
+            text-align: center;
+            min-height: 410px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        max-width: 600px;
+
+        @media (max-width: $md3+px) {
+            margin: 0 auto 20px;
+        }
+    }
+
+    &__text {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 1.6667em;
+        margin-bottom: 40px;
+        max-width: 404px;
+
+        @media (max-width: $md3+px) {
+            max-width: none;
+        }
+    }
+}

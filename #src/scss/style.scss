@@ -1,0 +1,415 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// ==== FONTS ===========================================================================================
+@import "fonts";
+// ==== // FONTS ===========================================================================================
+
+// ==== VARS ===========================================================================================
+@import "vars";
+// ==== // VARS ===========================================================================================
+
+// ==== Normalize ===========================================================================================
+@import "normalize";
+// ==== // НОРМАЛАЙЗ ===========================================================================================
+
+//<MIXINE>===============================================================================================
+@import "mixins.scss";
+//</MIXINE>===============================================================================================
+
+//<ICOMOON>===============================================================================================
+@import "../icomoon/style";
+//</ICOMOON>===============================================================================================
+
+//<FANCYBOX>===============================================================================================
+//@import "plagins/fancybox.scss";
+//<FANCYBOX>===============================================================================================
+
+// ==== PLAGINS ===========================================================================================
+@import "plagins/swiper-bundle";
+//@import "plagins/drift-basic";
+// ==== // PLAGINS ===========================================================================================
+
+// ==== FORM STYLE DEFAULT ===========================================================================================
+@import "forms";
+// ==== FORM STYLE DEFAULT ===========================================================================================
+
+// ==== POPUP ===========================================================================================
+@import "../common/popup/popup";
+// ==== // POPUP ===========================================================================================
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	font-size: 10px;
+	height: 100%;
+}
+html,
+body {
+	min-width: $minwidth;
+	margin: 0 auto;
+}
+body {
+	line-height: 1;
+	font-family: $mainFontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: $textColor;
+	font-size: 1.8rem;
+	transition: opacity 0.8s ease;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-height: 100%;
+	background-color: $bg;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+input,
+button,
+textarea {
+	font-family: $mainFontFamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.center {
+	text-align: center;
+}
+
+._page {
+	flex: 1 1 auto;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1260px;
+	margin: 0 auto;
+	padding: 0 40px;
+
+	@media (max-width: 374.98px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+// === title ========================================================================
+.title-1 {
+	font-weight: 300;
+	font-size: 100px;
+	line-height: 1.17em;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	@media (max-width: $md3+px) {
+		font-size: 70px;
+	}
+}
+.title-2 {
+	font-weight: 300;
+	font-size: 72px;
+	line-height: 1.16667em;
+	text-transform: uppercase;
+
+	& > strong {
+		font-weight: 300;
+		display: block;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 62px;
+	}
+
+	@media (max-width: 575.98px) {
+		font-size: 52px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 28px;
+	}
+}
+
+.title-3 {
+	font-weight: 300;
+	font-size: 62px;
+	line-height: 1.177em;
+
+	@media (max-width: $md3+px) {
+		font-size: 52px;
+	}
+}
+
+.title-4 {
+}
+
+.title-5 {
+}
+.title-6 {
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 1em;
+}
+
+.head {
+	&__body {
+		position: relative;
+	}
+
+	&__suptitle {
+		position: absolute;
+		left: 0;
+		top: -5px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.6667em;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		color: $textLightColor;
+		margin-bottom: 30px;
+	}
+
+	&__content {
+		@media (min-width: 768px) {
+			margin-left: 300px;
+		}
+	}
+}
+
+.content-wrap {
+	padding-left: 30px;
+	@media (min-width: 768px) {
+		padding-left: 50px;
+	}
+	@media (min-width: 992px) {
+		padding-left: 100px;
+	}
+}
+
+.text {
+}
+
+.hover {
+	cursor: pointer;
+	padding: 7.5px;
+	transition: all 0.3s ease;
+
+	@media (min-width: 992px) {
+		&:hover {
+			background-color: rgba(#fff, 0.2);
+		}
+	}
+}
+// === and title ========================================================================
+
+// === btn ========================================================================
+.btn-default {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 64px;
+	padding: 10px 20px;
+	border-radius: 300px;
+	cursor: pointer;
+	background-color: #fff;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 112%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: $mainColor;
+	min-width: 253px;
+	transition: all 0.3s ease;
+
+	@media (min-width: 992px) {
+		&:hover {
+			background-color: $mainColor2;
+			color: $textLightColor;
+		}
+	}
+
+	&.with-errow {
+		position: relative;
+		min-height: 46px;
+		padding:8px  26px 8px 15px;
+		text-transform: none;
+		font-size: 18px;
+		min-width: auto;
+		letter-spacing: 0;
+		&:after {
+			font-family: 'icomoon';
+			content: "\e905";
+			margin-left: 21px;
+			display: inline-block;
+			transition: transform .3s ease;
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				&:after {
+					transform: translateX(5px);
+				}
+			}
+		}
+	}
+}
+
+button.btn-default {
+}
+
+// === and btn ========================================================================
+
+.input {
+}
+
+.textarea {
+}
+
+.link {
+}
+
+// === TEXT CONTETN BLOCK ========================================================================
+.text-content {
+	font-size: 18px;
+	line-height: 1.6667em;
+
+	& h1 {
+	}
+	& h2 {
+	}
+	& h3 {
+	}
+	& h4 {
+	}
+
+	& h5 {
+	}
+	& h6 {
+	}
+
+	& p {
+		margin-bottom: 1.6em;
+	}
+
+	& ul {
+	}
+
+	& ol {
+	}
+
+	& figure {
+	}
+}
+// === and TEXT CONTETN BLOCK ========================================================================
+
+// ==== BLOCKS =====================================================
+@import "../common/header/header";
+@import "../common/footer/footer";
+@import "../common/checkbox/checkbox";
+@import "../common/promo-header/promo-header";
+@import "../common/about/about";
+@import "../common/programs/programs";
+@import "../common/advantages/advantages";
+@import "../common/info-block/info-block";
+@import "../common/team/team";
+@import "../common/places/places";
+// ==== BLOCKS =====================================================
+
+// ==== PAGES =====================================================
+
+// ==== HOME =====================================================
+@import "pages/home";
+// ==== AND HOME =====================================================
+
+// ==== AND PAGES =====================================================

@@ -1,0 +1,136 @@
+.team {
+    padding: 100px 0 50px;
+
+    @media (max-width: $md3+px) {
+        padding: 25px 0;
+    }
+
+    &__body {
+        position: relative;
+    }
+
+    & .head__title {
+        margin-bottom: 50px;
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__decor-1 {
+        position: absolute;
+        left: 41%;
+        top: -103px;
+        z-index: 3;
+
+        @media (max-width: $md3+px) {
+            left: auto;
+            top: -13px;
+            right: 2%;
+
+            & img {
+                width: 100px;
+            }
+        }
+
+        & img {
+            width: 186px;
+            height: auto;
+        }
+    }
+    &__decor-2 {
+        position: absolute;
+        right: 11px;
+        bottom: 150px;
+        z-index: 3;
+
+        @media (max-width: $md1+px) {
+            bottom: 110px;
+        }
+        @media (max-width: $md3+px) {
+            bottom: 100px;
+
+            & img {
+                width: 150px;
+            }
+        }
+
+        @media (max-width: $md4+px) {
+            bottom: 0px;
+
+            & img {
+                width: 140px;
+            }
+        }
+
+        & img {
+            width: 200px;
+            height: auto;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+
+        & > li {
+            padding: 0 10px;
+            flex: 0 1 33.3333%;
+            margin-bottom: 50px;
+
+            @media (max-width: $md3+px) {
+                flex: 0 1 50%;
+            }
+
+            @media (max-width: 575.98px) {
+                flex: 0 1 100%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__card {
+        height: 100%;
+        border-bottom: 2px solid #545a5c;
+        padding-bottom: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 24px;
+        line-height: 125%;
+    }
+
+    &__card-photo {
+        --size: 240px;
+
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        background: #434343;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+
+        @media (max-width: $md2+px) {
+            --size: 200px;
+
+        }
+    }
+
+    &__card-name {
+        color: $textLightColor;
+        margin-bottom: 10px;
+    }
+
+    &__card-position {
+        font-size: 16px;
+        line-height: 150%;
+    }
+}

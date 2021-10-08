@@ -1,0 +1,24 @@
+
+
+//<ШРИФТЫ>===========================================================================================================
+$mainFontFamily: 'Roboto', sans-serif;
+//</ШРИФТЫ>===========================================================================================================
+
+//<РАЗМЕРЫ КОНТЕЙНЕРА>===========================================================================================================
+$minwidth: 320px;
+$mw: 1170;
+$md1: 1267.98;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</РАЗМЕРЫ КОНТЕЙНЕРА>===========================================================================================================
+
+$textColor: #9FA2A3;
+$textLightColor: #ffffff;
+$bg: #252525;
+$mainColor:#333333;
+$mainColor2: #5A5A5A;
+
+$chevronDown: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDEwIDYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMC4xOTU4MzggMC40NDcwNTlDMC4zNjMyMDYgMC4yNzk2OTEgMC42MzQ1NjIgMC4yNzk2OTEgMC44MDE5MyAwLjQ0NzA1OUw0Ljk5ODg4IDQuNjQ0MDFMOS4xOTU4NCAwLjQ0NzA1OUM5LjM2MzIxIDAuMjc5NjkxIDkuNjM0NTYgMC4yNzk2OTEgOS44MDE5MyAwLjQ0NzA1OUM5Ljk2OTMgMC42MTQ0MjYgOS45NjkzIDAuODg1NzgzIDkuODAxOTMgMS4wNTMxNUw1LjMwMTkzIDUuNTUzMTVDNS4xMzQ1NiA1LjcyMDUyIDQuODYzMjEgNS43MjA1MiA0LjY5NTg0IDUuNTUzMTVMMC4xOTU4MzggMS4wNTMxNUMwLjAyODQ3MDYgMC44ODU3ODMgMC4wMjg0NzA2IDAuNjE0NDI2IDAuMTk1ODM4IDAuNDQ3MDU5WiIgZmlsbD0iIzlGQTJBMyIvPgo8L3N2Zz4K";
+$chevronRight: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xLjA0Mjg5IDIzLjIwNzFDMC42NTIzNjkgMjIuODE2NiAwLjY1MjM2OSAyMi4xODM0IDEuMDQyODkgMjEuNzkyOUwxMC44MzU4IDEyTDEuMDQyODkgMi4yMDcxMUMwLjY1MjM2OSAxLjgxNjU4IDAuNjUyMzY5IDEuMTgzNDIgMS4wNDI4OSAwLjc5Mjg5MkMxLjQzMzQyIDAuNDAyMzY5IDIuMDY2NTggMC40MDIzNjkgMi40NTcxMSAwLjc5Mjg5MkwxMi45NTcxIDExLjI5MjlDMTMuMzQ3NiAxMS42ODM0IDEzLjM0NzYgMTIuMzE2NiAxMi45NTcxIDEyLjcwNzFMMi40NTcxMSAyMy4yMDcxQzIuMDY2NTggMjMuNTk3NiAxLjQzMzQyIDIzLjU5NzYgMS4wNDI4OSAyMy4yMDcxWiIgZmlsbD0iIzlGQTJBMyIvPgo8L3N2Zz4K";
+$chevronRightWhite: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxMCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wLjQ2MTQzOCAxNy41Mzg2QzAuMTYzODk2IDE3LjI0MSAwLjE2Mzg5NiAxNi43NTg2IDAuNDYxNDM4IDE2LjQ2MTFMNy45MjI2OSA4Ljk5OTgxTDAuNDYxNDM4IDEuNTM4NTZDMC4xNjM4OTYgMS4yNDEwMiAwLjE2Mzg5NiAwLjc1ODYwNyAwLjQ2MTQzOCAwLjQ2MTA2NEMwLjc1ODk4IDAuMTYzNTIyIDEuMjQxMzkgMC4xNjM1MjIgMS41Mzg5MyAwLjQ2MTA2NEw5LjUzODkzIDguNDYxMDdDOS44MzY0OCA4Ljc1ODYxIDkuODM2NDggOS4yNDEwMiA5LjUzODkzIDkuNTM4NTZMMS41Mzg5MyAxNy41Mzg2QzEuMjQxMzkgMTcuODM2MSAwLjc1ODk4IDE3LjgzNjEgMC40NjE0MzggMTcuNTM4NloiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=";
