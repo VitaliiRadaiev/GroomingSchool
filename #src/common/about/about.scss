@@ -12,27 +12,27 @@
         left: 130px;
 
         @media (max-width: $md3+px) {
-            left: -40px;
+            left: -70px;
             transform: translateX(-50%);
+
+            & img {
+                width: 90px;
+            }
         }
 
         @media (max-width: 374.98px) {
-            left: -15px;
+            left: -55px;
             transform: translateX(-70%);
-        }
-    }
+            top: auto;
+            bottom: -55px;
 
-    &__decor-img {
-        width: 149px;
-
-        @media (max-width: $md3+px) {
-            width: 90px;
+            & img {
+                width: 60px;
+            }
         }
 
         & img {
-            width: 100%;
-            height: auto;
-            z-index: 1;
+            width: 149px;
         }
     }
 
