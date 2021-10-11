@@ -32,6 +32,8 @@ window.addEventListener('load', function () {
 	@@include('../common/about/about.js');
 	@@include('../common/testimonials/testimonials.js');
 	@@include('../common/instagram/instagram.js');
+	@@include('../common/popup/popup-gallery.js');
+	@@include('../common/video/video.js');
 
 
 	let buttonsScrollTop = document.querySelectorAll('.btn-scroll-top');
@@ -51,6 +53,59 @@ window.addEventListener('load', function () {
 		offset: 4,
 	})
 	wow.init();
+
+
+	function menuItemsHandler() {
+		let items = document.querySelectorAll('.popup-menu__list-link');
+
+		if(!items.length) return
+
+		items.forEach(item => {
+			let id = item.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
+			item.addEventListener('click', (e) => {
+				e.preventDefault();
+				let el = document.getElementById(id);
+				window.scrollTo({
+					top: el.offsetTop - 40,
+					behavior: 'smooth',
+				})
+				popup.close('#mainMenu');
+			})
+		})
+
+		return {
+			setActiveItem(id) {
+				items.forEach(item => {
+					let hrefData = item.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
+
+					if(id === hrefData) {
+						item.classList.add('active');
+					} else {
+						item.classList.remove('active');
+					}
+				})
+			}
+		}
+	}
+
+	const menuItems = menuItemsHandler();
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			// console.log(entry.target.offsetTop);
+			// console.log(entry.target.id);
+			if(entry.isIntersecting) {
+				if(entry.target.id) {
+					menuItems.setActiveItem(entry.target.id);
+				}
+			}
+		})
+	}, {threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]});
+
+	document.querySelectorAll('main > section').forEach(
+		(section) => observer.observe(section)
+	)
+
 });
 
 window.addEventListener('DOMContentLoaded', function() {

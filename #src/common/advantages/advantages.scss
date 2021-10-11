@@ -7,10 +7,6 @@
         padding-bottom: 50px;
     }
 
-    & .info-block {
-        padding-bottom: 0;
-    }
-
     &__decor-1 {
         position: absolute;
         z-index: 1;
@@ -84,12 +80,6 @@
     }
 
     &__list {
-        margin-bottom: 100px;
-
-        @media (max-width: $md3+px) {
-            margin-bottom: 25px;
-        }
-
         & > li {
             &:not(:last-child) {
                 margin-bottom: 89px;

@@ -8,6 +8,8 @@ let unlock = true;
 
 const timeout = 800;
 
+let closeCallbacks = {}
+
 if(popupLinks.length > 0) {
 	for (let index = 0; index < popupLinks.length; index++) {
 		const popupLink = popupLinks[index];
@@ -57,6 +59,12 @@ function popupClose(popupActive, doUnlock = true) {
 			bodyUnlock();
 		}
 	}
+	if(popupActive.id) {
+		if(closeCallbacks[popupActive.id]) {
+			closeCallbacks[popupActive.id]();
+		}
+	}
+
 }
 
 function bodyLock() {
@@ -161,3 +169,31 @@ if(allPopup.length) {
 		}
 	})
 }
+
+window.popup = (() => {
+	return {
+		open(id) {
+			if(!id) return;
+			
+			let popup = document.querySelector(id);
+
+			if(!popup) return; 
+
+			popupOpen(popup);
+		}, 
+		close(id) {
+			if(!id) return;
+			
+			let popup = document.querySelector(id);
+
+			if(!popup) return;
+
+			popupClose(popup);
+		},
+		addEvent(event, popupId, callback) {
+			if(event === 'close') {
+				closeCallbacks[popupId] = callback;
+			}
+		} 
+	}
+})()

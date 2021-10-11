@@ -17,18 +17,6 @@ $( document ).ready(function() {
           $img.replaceWith($svg);
         }, 'xml');
       });
-      
-    
-    if($('.anchor').length>0) {
-        $(".anchor").click(function() {
-          var elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
-          var destination = $(elementClick).offset().top - 70;
-          jQuery("html:not(:animated),body:not(:animated)").animate({
-            scrollTop: destination
-          }, 600);
-          return false;
-        });
-    }
 
     	// ==== parallax =====================================================
 	$('._parallax').parallax();

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "Grooming"
+})
+
+<body>
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	@@include('common/header/_header.html',{
+	"white": '',
+	})
+	<!-- == // TOP LINE ================== -->
+
+	<main class="_page page404 _padding-top">
+        <section class="page404-b">
+            <div class="container page404-b__body">
+                <div class="page404-b__col-1">
+                    <h1 class="page404-b__title">404</h1>
+                    <div class="page404-b__text">Страница не обнаружена</div>
+                    <a href="#" class="btn-default">Записаться</a>
+                </div>
+                <div class="page404-b__col-2">
+                    <div class="page404-b__img-wrap">
+                        <div class="page404-b__img ibg">
+                            <img src="img/photo/page404-img.jpg" alt="">
+                        </div>
+                        <div class="page404-b__decor">
+                            <div class="page404-b__decor-img">
+                                <img src="img/photo/decor-12.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</main>
+
+	<!-- == FOOTER ================== -->
+	@@include('common/footer/_footer.html',{})
+	<!-- == // FOOTER ================== -->
+
+	@@include('common/popup/_popupMenu.html',{})
+	@@include('common/popup/_popupPrograms.html',{})
+	@@include('common/popup/_popupTeam.html',{})
+	@@include('common/popup/_popupReviewForm.html',{})
+	@@include('common/popup/_popupGallery.html',{})
+
+	@@include('_js-bottom.html',{})
+</body>
+
+</html>

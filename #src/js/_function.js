@@ -198,3 +198,19 @@ function setCounterAnim() {
 }
 
 setCounterAnim();
+
+let anchors = document.querySelectorAll('.anchor');
+if(anchors.length) {
+	anchors.forEach(anchor => {
+	//	var elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
+		let id = anchor.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
+		anchor.addEventListener('click', (e) => {
+			e.preventDefault();
+			let el = document.getElementById(id);
+			window.scrollTo({
+				top: el.offsetTop,
+				behavior: 'smooth',
+			})
+		})
+	})
+}

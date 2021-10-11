@@ -59,7 +59,7 @@
 	height: 100%;
 	overflow: auto;
 	position: relative;
-	transition: all .4s ease;
+	transition: all 0.4s ease;
 
 	&.is-scroll {
 		box-shadow: 0 20px 20px -20px inset rgba($mainColor, 0.1);
@@ -152,7 +152,7 @@
 
 		& a {
 			color: $textColor;
-			transition: all .3s ease;
+			transition: all 0.3s ease;
 
 			@media (min-width: 992px) {
 				&:hover {
@@ -176,3 +176,227 @@
 		}
 	}
 }
+
+.popup-programs {
+	&__title {
+		color: $mainColor;
+		margin-bottom: 10px;
+	}
+
+	&__subtitle {
+		margin-bottom: 40px;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__list {
+		margin-bottom: 50px;
+		& > li {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__list-title {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		font-size: 32px;
+		line-height: 1em;
+		color: $mainColor;
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: $textColor;
+			}
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 24px;
+		}
+
+		& > span.num-dot {
+			flex: 0 0 auto;
+			margin-right: 20px;
+		}
+	}
+
+	&__sub-menu {
+		padding-top: 20px;
+		display: none;
+		& > li {
+			&:not(:last-child) {
+				margin-bottom: 21px;
+			}
+		}
+	}
+
+	&__sub-menu-title {
+		position: relative;
+		padding-left: 42px;
+		display: block;
+		font-size: 24px;
+		line-height: 125%;
+		color: $textColor;
+		transition: all .3s ease;
+		cursor: pointer;
+
+		@media (max-width: $md4+px) {
+			font-size: 20px;
+			padding-left: 30px;
+		}
+		
+		&:before {
+			position: absolute;
+			font-family: 'icomoon';
+			content: "\e905";
+			top: 0px;
+			left: 11px;
+			font-size: 0.8em;
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				background-color: rgba($mainColor, 0.1);
+			}
+		}
+
+		&._active {
+			background-color: rgba($mainColor, 0.1);
+		}
+	}
+
+	&__sub-menu-content {
+		padding-left: 42px;
+		padding-top: 15px;
+		display: none;
+
+		@media (max-width: $md4+px) {
+			padding-left: 30px;
+		}
+
+		&.text-content {
+			& p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+
+.popup-team {
+
+	&__photo {
+		width: 240px;
+		height: 240px;
+		overflow: hidden;
+		background-color: $textColor;
+		border-radius: 50%;
+		margin-bottom: 20px;
+
+		@media (max-width: $md3+px) {
+			width: 160px;
+			height: 160px;
+		}
+		@media (max-width: $md4+px) {
+			width: 120px;
+			height: 120px;
+		}
+	}
+
+	&__name {
+		color: $mainColor;
+		margin-bottom: 10px;
+	}
+
+	&__position {
+		margin-bottom: 20px;
+	}
+
+	&__text-content {
+	}
+}
+
+
+
+.popup-review {
+
+	&__title {
+		color: $mainColor;
+		margin-bottom: 10px;
+	}
+
+	&__subtitle {
+		margin-bottom: 34px;
+	}
+
+	&__form {
+	}
+
+	&__items {
+		margin-bottom: 10px;
+
+		@media (min-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+
+	&__item {
+		flex: 0 1 calc(50% - 9px);
+		margin-bottom: 20px;
+
+		&.full-width {
+			flex: 0 1 100%;
+		}
+	}
+}
+
+
+.popup-thank-you {
+
+	&__content {
+		height: 100%;
+		padding: 40px 40px;
+		text-align: center;
+		overflow-y: auto;
+
+		& > div {
+			min-height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		@media (max-width: $md4+px) {
+			padding: 40px 20px;
+		}
+	}
+
+	&__img {
+		height: 108px;
+		margin-bottom: 24px;
+		& img {
+			height: 100%;
+			width: auto;
+			display: inline-block;
+		}
+	}
+
+	&__title {
+		color: $mainColor;
+	}
+
+	&__text {
+	}
+}
+
+

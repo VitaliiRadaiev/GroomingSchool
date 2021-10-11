@@ -89,6 +89,18 @@
                     margin-bottom: 0;
                 }
             }
+
+            &:not(:last-child) {
+                & .team__card {
+                    @media (min-width: 992px) {
+                        &:hover {
+                            & .team__card-photo {
+                                box-shadow: 0 0 30px rgba(#fff, 0.3);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -102,11 +114,12 @@
         align-items: center;
         font-size: 24px;
         line-height: 125%;
+        color: $textColor;
     }
 
     &__card-photo {
         --size: 240px;
-
+        transition: all .3s ease;
         width: var(--size);
         height: var(--size);
         border-radius: 50%;

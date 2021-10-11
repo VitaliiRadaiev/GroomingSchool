@@ -194,6 +194,9 @@ textarea {
 	@media (max-width: $md3+px) {
 		font-size: 70px;
 	}
+	@media (max-width: $md4+px) {
+		font-size: 50px;
+	}
 }
 .title-2 {
 	font-weight: 300;
@@ -232,6 +235,13 @@ textarea {
 }
 
 .title-5 {
+	font-weight: 400;
+	font-size: 42px;
+	line-height: 1.16em;
+
+	@media (max-width: $md3+px) {
+		font-size: 36px;
+	}
 }
 .title-6 {
 	font-weight: 400;
@@ -245,7 +255,6 @@ textarea {
 	}
 
 	&__suptitle {
-		
 		left: 0;
 		top: -5px;
 		font-weight: 500;
@@ -271,10 +280,8 @@ textarea {
 }
 
 .content-wrap {
-	
 	@media (min-width: 375px) {
 		padding-left: 30px;
-
 	}
 
 	@media (min-width: 768px) {
@@ -288,7 +295,7 @@ textarea {
 .text {
 }
 
-.hover {
+.hover:not(.swiper-button-disabled) {
 	cursor: pointer;
 	padding: 7.5px;
 	transition: all 0.3s ease;
@@ -331,17 +338,17 @@ textarea {
 	&.with-errow {
 		position: relative;
 		min-height: 46px;
-		padding:8px  26px 8px 15px;
+		padding: 8px 26px 8px 15px;
 		text-transform: none;
 		font-size: 18px;
 		min-width: auto;
 		letter-spacing: 0;
 		&:after {
-			font-family: 'icomoon';
+			font-family: "icomoon";
 			content: "\e905";
 			margin-left: 21px;
 			display: inline-block;
-			transition: transform .3s ease;
+			transition: transform 0.3s ease;
 		}
 
 		@media (min-width: 992px) {
@@ -352,6 +359,11 @@ textarea {
 			}
 		}
 	}
+
+	&.dark {
+		background-color: $mainColor;
+		color: $textLightColor;
+	}
 }
 
 button.btn-default {
@@ -360,9 +372,48 @@ button.btn-default {
 // === and btn ========================================================================
 
 .input {
+	border: 1px solid #d2d2d2;
+	display: flex;
+	height: 64px;
+	padding: 15px 25px;
+	font-size: 16px;
+	line-height: 19px;
+	color: $mainColor;
+	width: 100%;
+	transition: all .3s ease;
+
+	&::placeholder {
+		font-size: 16px;
+		line-height: 19px;
+		color: #a2a2a2;
+	}
+
+	&:focus {
+		border: 1px solid $mainColor;
+	}
 }
 
 .textarea {
+	border: 1px solid #d2d2d2;
+	display: flex;
+	height: 95px;
+	padding: 23px 25px;
+	font-size: 16px;
+	line-height: 19px;
+	color: $mainColor;
+	resize: none;
+	width: 100%;
+	transition: all .3s ease;
+
+	&::placeholder {
+		font-size: 16px;
+		line-height: 19px;
+		color: #a2a2a2;
+	}
+
+	&:focus {
+		border: 1px solid $mainColor;
+	}
 }
 
 .link {
@@ -385,6 +436,11 @@ button.btn-default {
 	& h5 {
 	}
 	& h6 {
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 94%;
+		margin-bottom: 20px;
+		color: $mainColor;
 	}
 
 	& p {
@@ -392,6 +448,21 @@ button.btn-default {
 	}
 
 	& ul {
+		& > li {
+			display: flex;
+			align-items: center;
+			font-size: 18px;
+			line-height: 133%;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			& > span.num-dot {
+				flex: 0 0 auto;
+				margin-right: 10px;
+			}
+		}
 	}
 
 	& ol {
@@ -399,7 +470,34 @@ button.btn-default {
 
 	& figure {
 	}
+
+	& .btn-default {
+		margin-bottom: 50px;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 25px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
+.num-dot {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 42px;
+	min-width: 42px;
+	border-radius: 50%;
+	padding: 8px;
+	background: #5a5a5a;
+	color: $textLightColor;
+	font-size: 24px;
+	line-height: 1em;
+	text-align: center;
+}
+
 // === and TEXT CONTETN BLOCK ========================================================================
 
 // ==== BLOCKS =====================================================
@@ -416,12 +514,11 @@ button.btn-default {
 @import "../common/testimonials/testimonials";
 @import "../common/instagram/instagram";
 @import "../common/contact/contact";
+@import "../common/popup/popup-gallery";
+@import "../common/video/video";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
-
-// ==== HOME =====================================================
 @import "pages/home";
-// ==== AND HOME =====================================================
-
+@import "pages/page404";
 // ==== AND PAGES =====================================================

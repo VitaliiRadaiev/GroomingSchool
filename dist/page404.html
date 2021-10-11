@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grooming</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	<header class="header _lp">
+    <div class="header__body container">
+        <div class="header__logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="logo">
+            </a>
+        </div>
+        <nav class="header__menu menu">
+            <ul class="menu__list">
+                <li >
+                    <a href="index.html#programs" class="menu__link anchor">Курсы</a>
+                </li>
+                <li>
+                    <a href="index.html#advantages" class="menu__link anchor">Философия</a>
+                </li>
+                <li>
+                    <a href="index.html#places" class="menu__link anchor">Трудоустройство</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__burger">
+            <a href="mainMenu" class="burger-wrap popup-link hover">
+                <div class="burger">
+                    <img src="img/icons/burger.svg" alt="">
+                </div>
+                <div class="burger-text">
+                    меню
+                </div>
+            </a>
+        </div>
+        <a href="tel:0989055599" class="header__phone hover">
+            <img src="img/icons/phone.svg" alt="">
+            098 905 55 99
+        </a> 
+        <div class="header__language language">
+            <div class="language__title">ru</div>
+            <ul class="language__list">
+                <li>
+                    <a href="#">en</a>
+                </li>
+                <li>
+                    <a href="#">pl</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+	<!-- == // TOP LINE ================== -->
+
+	<main class="_page page404 _padding-top">
+        <section class="page404-b">
+            <div class="container page404-b__body">
+                <div class="page404-b__col-1">
+                    <h1 class="page404-b__title">404</h1>
+                    <div class="page404-b__text">Страница не обнаружена</div>
+                    <a href="#" class="btn-default">Записаться</a>
+                </div>
+                <div class="page404-b__col-2">
+                    <div class="page404-b__img-wrap">
+                        <div class="page404-b__img ibg">
+                            <img src="img/photo/page404-img.jpg" alt="">
+                        </div>
+                        <div class="page404-b__decor">
+                            <div class="page404-b__decor-img">
+                                <img src="img/photo/decor-12.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</main>
+
+	<!-- == FOOTER ================== -->
+	<footer class="footer">
+    <div class="container">
+        <div class="footer__body">
+            <div class="footer__col">
+                <div class="footer__copy">
+                    Copyright 2021 © BarberPet
+                </div>
+            </div>
+            <div class="footer__col">
+                <div class="footer__copy">Created by <span>FamilyLab</span></div>
+                <div class="btn-scroll-top"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+	<!-- == // FOOTER ================== -->
+
+	<div class="popup" id="mainMenu">
+	<!-- 
+		API
+		use global methods popup.open('#mainMenu'), popup.close('#mainMenu');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-menu">
+				<div class="popup-head">
+					<h3 class="popup-menu__title title-3">
+						Меню
+					</h3>
+				</div>
+				<div class="popup-scroll-wrap">
+					<div class="popup-menu__scroll-wrap">
+						<ul class="popup-menu__list">
+							<li>
+								<a href="index.html#about" class="popup-menu__list-link active">
+									О нас
+								</a>
+							</li>
+							<li>
+								<a href="index.html#programs" class="popup-menu__list-link">
+									Наши программы
+								</a>
+							</li>
+							<li>
+								<a href="index.html#advantages" class="popup-menu__list-link">
+									Это не просто школа
+								</a>
+							</li>
+							<li>
+								<a href="index.html#baseCourse" class="popup-menu__list-link">
+									Базовый курс
+								</a>
+							</li>
+							<li>
+								<a href="index.html#team" class="popup-menu__list-link">
+									Наши преподователи
+								</a>
+							</li>
+							<li>
+								<a href="index.html#places" class="popup-menu__list-link">
+									Обратная связь
+								</a>
+							</li>
+							<li>
+								<a href="index.html#instagram" class="popup-menu__list-link">
+									Инстаграм
+								</a>
+							</li>
+							<li>
+								<a href="index.html#contact" class="popup-menu__list-link">
+									Контакты
+								</a>
+							</li>
+						</ul>
+						<hr>
+						<ul class="popup-menu__bottom">
+							<li>
+								<a href="tel:380675969697">+380 67 596 9697</a>
+							</li>
+							<li>
+								<a href="mailto:barberpetschool@gmail.com">barberpetschool@gmail.com</a>
+							</li>
+							<li>
+								Киев Днепровская набережная 18а
+							</li>
+							<li>
+								<a href="#">Инстаграм</a>,
+								<a href="#">Фейсбук</a>,
+								<a href="#">Телеграм</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="popup popup-programs" id="program-1">
+	<!-- 
+		API
+		use global methods popup.open('#programs-1'), popup.close('#programs-1');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-head">
+				<h3 class="popup-programs__title title-3">
+					Базовый курс
+				</h3>
+				<div class="popup-programs__subtitle text-content">
+					(для тех кто
+					сомневается, с возможностью присоединится к
+					базовому курсу, после прохождения)
+
+				</div>
+			</div>
+			<div class="popup-scroll-wrap">
+				<ul class="popup-programs__list _spollers _one">
+					<li>
+						<div class="popup-programs__list-title _spoller _active">
+							<span class="num-dot">1</span>
+							Введение в груминг
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="popup-programs__list-title _spoller">
+							<span class="num-dot">2</span>
+							Инструмент и оборудование
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="popup-programs__list-title _spoller">
+							<span class="num-dot">3</span>
+							Гигиенический уход
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#" class="btn-default dark">Записаться</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-programs" id="program-2">
+	<!-- 
+		API
+		use global methods popup.open('#programs-1'), popup.close('#programs-1');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-head">
+				<h3 class="popup-programs__title title-3">
+					Быстрый старт 
+				</h3>
+				<div class="popup-programs__subtitle text-content">
+					(для тех кто
+					сомневается, с возможностью присоединится к
+					базовому курсу, после прохождения)
+
+				</div>
+			</div>
+			<div class="popup-scroll-wrap">
+				<ul class="popup-programs__list _spollers _one">
+					<li>
+						<div class="popup-programs__list-title _spoller _active">
+							<span class="num-dot">1</span>
+							Введение в груминг
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="popup-programs__list-title _spoller">
+							<span class="num-dot">2</span>
+							Инструмент и оборудование
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="popup-programs__list-title _spoller">
+							<span class="num-dot">3</span>
+							Гигиенический уход
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#" class="btn-default dark">Записаться</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-programs" id="program-3">
+	<!-- 
+		API
+		use global methods popup.open('#programs-1'), popup.close('#programs-1');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-head">
+				<h3 class="popup-programs__title title-3">
+					Повышение квалификации
+				</h3>
+				<div class="popup-programs__subtitle text-content">
+					(для тех кто
+					сомневается, с возможностью присоединится к
+					базовому курсу, после прохождения)
+
+				</div>
+			</div>
+			<div class="popup-scroll-wrap">
+				<ul class="popup-programs__list _spollers _one">
+					<li>
+						<div class="popup-programs__list-title _spoller _active">
+							<span class="num-dot">1</span>
+							Введение в груминг
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="popup-programs__list-title _spoller">
+							<span class="num-dot">2</span>
+							Инструмент и оборудование
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="popup-programs__list-title _spoller">
+							<span class="num-dot">3</span>
+							Гигиенический уход
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#" class="btn-default dark">Записаться</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-programs" id="program-4">
+	<!-- 
+		API
+		use global methods popup.open('#programs-1'), popup.close('#programs-1');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-head">
+				<h3 class="popup-programs__title title-3">
+					Мастер классы
+				</h3>
+				<div class="popup-programs__subtitle text-content">
+					(для тех кто
+					сомневается, с возможностью присоединится к
+					базовому курсу, после прохождения)
+
+				</div>
+			</div>
+			<div class="popup-scroll-wrap">
+				<ul class="popup-programs__list _spollers _one">
+					<li>
+						<div class="popup-programs__list-title _spoller _active">
+							<span class="num-dot">1</span>
+							Введение в груминг
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="popup-programs__list-title _spoller">
+							<span class="num-dot">2</span>
+							Инструмент и оборудование
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="popup-programs__list-title _spoller">
+							<span class="num-dot">3</span>
+							Гигиенический уход
+						</div>
+						<ul class="popup-programs__sub-menu _spollers _one">
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">Что тако Груминг</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Классификация собак Международной
+									Кинологической Федерации
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Зоопсихология в груминге
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Этикет грумера
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="popup-programs__sub-menu-title _spoller">
+									Первая помощь в груминге (лекция от ветеринара)
+								</div>
+								<div class="popup-programs__sub-menu-content text-content">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo officia distinctio esse rerum? Quos placeat doloribus distinctio vel quis. Delectus corrupti non veritatis nostrum nobis! Aperiam tempora aut voluptatibus.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#" class="btn-default dark">Записаться</a>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="popup popup-team" id="teacher-1">
+	<!-- 
+		API
+		use global methods popup.open('#programs-1'), popup.close('#programs-1');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-head">
+				<div class="popup-team__photo ibg">
+                    <img src="img/photo/team-img-1.jpg" alt="">
+                </div>
+			</div>
+			<div class="popup-scroll-wrap">
+                <div class="popup-team__name title-5">Папян Аліна Едуардівна </div>
+                <div class="popup-team__position text-content">PRO грумер В сети салонов Barber Pet</div>
+				<div class="popup-team__text-content text-content">
+                    <p>
+                        Алина себя не рекламируют она выбирает постоянно учиться и наращивать skills с невероятным темпом.  И ее работы говорят сами за себя. Основная специализация:   салонный и креативный груминг собак мелких и средних пород, котов. Начинала с самообучения, позже-повышение квалификации у грумера Виктория Кириченко, затем в школе груминга MaryGroom. Опыт работы шесть половиной лет аттестация президента европейской ассоциации гримеров Умберто Леманна, присвоено международная степень Master Groomer в категории салонная стрижка.
+                    </p>
+                    <a href="#" class="btn-default dark">Записаться</a>
+                    <h6>Победительница и призер национальных конкурсов</h6>
+                    <ul>
+                        <li>
+                            <span class="num-dot">1</span>
+                            Первое место в категории фристайл International Grooming Contest under the aegis of the IGA «Ukrainian Master Groom» 2019
+                        </li>
+                        <li>
+                            <span class="num-dot">1</span>
+                            Первое место в категории салонный груминг ,  класс ниспадающей шерсти  на Groomfest 2017, Киев
+                        </li>
+                        <li>
+                            <span class="num-dot">2</span>
+                            Второе место в категории фристайл International Grooming Contest  under the aegis of the IGA «Ukrainian Master Groom» 2017
+                        </li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-team" id="teacher-2">
+	<!-- 
+		API
+		use global methods popup.open('#programs-1'), popup.close('#programs-1');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-head">
+				<div class="popup-team__photo ibg">
+                    <img src="img/photo/team-img-2.jpg" alt="">
+                </div>
+			</div>
+			<div class="popup-scroll-wrap">
+                <div class="popup-team__name title-5">Карпенко Олена Ігорівна</div>
+                <div class="popup-team__position text-content">PRO грумер В сети салонов Barber Pet</div>
+				<div class="popup-team__text-content text-content">
+                    <p>
+                        Алина себя не рекламируют она выбирает постоянно учиться и наращивать skills с невероятным темпом.  И ее работы говорят сами за себя. Основная специализация:   салонный и креативный груминг собак мелких и средних пород, котов. Начинала с самообучения, позже-повышение квалификации у грумера Виктория Кириченко, затем в школе груминга MaryGroom. Опыт работы шесть половиной лет аттестация президента европейской ассоциации гримеров Умберто Леманна, присвоено международная степень Master Groomer в категории салонная стрижка.
+                    </p>
+                    <a href="#" class="btn-default dark">Записаться</a>
+                    <h6>Победительница и призер национальных конкурсов</h6>
+                    <ul>
+                        <li>
+                            <span class="num-dot">1</span>
+                            Первое место в категории фристайл International Grooming Contest under the aegis of the IGA «Ukrainian Master Groom» 2019
+                        </li>
+                        <li>
+                            <span class="num-dot">1</span>
+                            Первое место в категории салонный груминг ,  класс ниспадающей шерсти  на Groomfest 2017, Киев
+                        </li>
+                        <li>
+                            <span class="num-dot">2</span>
+                            Второе место в категории фристайл International Grooming Contest  under the aegis of the IGA «Ukrainian Master Groom» 2017
+                        </li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-team" id="teacher-3">
+	<!-- 
+		API
+		use global methods popup.open('#programs-1'), popup.close('#programs-1');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-head">
+				<div class="popup-team__photo ibg">
+                    <img src="img/photo/team-img-3.jpg" alt="">
+                </div>
+			</div>
+			<div class="popup-scroll-wrap">
+                <div class="popup-team__name title-5">Ісаченко Анна Володимирівна </div>
+                <div class="popup-team__position text-content">PRO грумер В сети салонов Barber Pet</div>
+				<div class="popup-team__text-content text-content">
+                    <p>
+                        Алина себя не рекламируют она выбирает постоянно учиться и наращивать skills с невероятным темпом.  И ее работы говорят сами за себя. Основная специализация:   салонный и креативный груминг собак мелких и средних пород, котов. Начинала с самообучения, позже-повышение квалификации у грумера Виктория Кириченко, затем в школе груминга MaryGroom. Опыт работы шесть половиной лет аттестация президента европейской ассоциации гримеров Умберто Леманна, присвоено международная степень Master Groomer в категории салонная стрижка.
+                    </p>
+                    <a href="#" class="btn-default dark">Записаться</a>
+                    <h6>Победительница и призер национальных конкурсов</h6>
+                    <ul>
+                        <li>
+                            <span class="num-dot">1</span>
+                            Первое место в категории фристайл International Grooming Contest under the aegis of the IGA «Ukrainian Master Groom» 2019
+                        </li>
+                        <li>
+                            <span class="num-dot">1</span>
+                            Первое место в категории салонный груминг ,  класс ниспадающей шерсти  на Groomfest 2017, Киев
+                        </li>
+                        <li>
+                            <span class="num-dot">2</span>
+                            Второе место в категории фристайл International Grooming Contest  under the aegis of the IGA «Ukrainian Master Groom» 2017
+                        </li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-team" id="teacher-4">
+	<!-- 
+		API
+		use global methods popup.open('#programs-1'), popup.close('#programs-1');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-head">
+				<div class="popup-team__photo ibg">
+                    <img src="img/photo/team-img-4.jpg" alt="">
+                </div>
+			</div>
+			<div class="popup-scroll-wrap">
+                <div class="popup-team__name title-5">Константінов Володимир Миколайович</div>
+                <div class="popup-team__position text-content">PRO грумер В сети салонов Barber Pet</div>
+				<div class="popup-team__text-content text-content">
+                    <p>
+                        Алина себя не рекламируют она выбирает постоянно учиться и наращивать skills с невероятным темпом.  И ее работы говорят сами за себя. Основная специализация:   салонный и креативный груминг собак мелких и средних пород, котов. Начинала с самообучения, позже-повышение квалификации у грумера Виктория Кириченко, затем в школе груминга MaryGroom. Опыт работы шесть половиной лет аттестация президента европейской ассоциации гримеров Умберто Леманна, присвоено международная степень Master Groomer в категории салонная стрижка.
+                    </p>
+                    <a href="#" class="btn-default dark">Записаться</a>
+                    <h6>Победительница и призер национальных конкурсов</h6>
+                    <ul>
+                        <li>
+                            <span class="num-dot">1</span>
+                            Первое место в категории фристайл International Grooming Contest under the aegis of the IGA «Ukrainian Master Groom» 2019
+                        </li>
+                        <li>
+                            <span class="num-dot">1</span>
+                            Первое место в категории салонный груминг ,  класс ниспадающей шерсти  на Groomfest 2017, Киев
+                        </li>
+                        <li>
+                            <span class="num-dot">2</span>
+                            Второе место в категории фристайл International Grooming Contest  under the aegis of the IGA «Ukrainian Master Groom» 2017
+                        </li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-team" id="teacher-5">
+	<!-- 
+		API
+		use global methods popup.open('#programs-1'), popup.close('#programs-1');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-head">
+				<div class="popup-team__photo ibg">
+                    <img src="img/photo/team-img-5.jpg" alt="">
+                </div>
+			</div>
+			<div class="popup-scroll-wrap">
+                <div class="popup-team__name title-5">Нос Анна Петровна </div>
+                <div class="popup-team__position text-content">PRO грумер В сети салонов Barber Pet</div>
+				<div class="popup-team__text-content text-content">
+                    <p>
+                        Алина себя не рекламируют она выбирает постоянно учиться и наращивать skills с невероятным темпом.  И ее работы говорят сами за себя. Основная специализация:   салонный и креативный груминг собак мелких и средних пород, котов. Начинала с самообучения, позже-повышение квалификации у грумера Виктория Кириченко, затем в школе груминга MaryGroom. Опыт работы шесть половиной лет аттестация президента европейской ассоциации гримеров Умберто Леманна, присвоено международная степень Master Groomer в категории салонная стрижка.
+                    </p>
+                    <a href="#" class="btn-default dark">Записаться</a>
+                    <h6>Победительница и призер национальных конкурсов</h6>
+                    <ul>
+                        <li>
+                            <span class="num-dot">1</span>
+                            Первое место в категории фристайл International Grooming Contest under the aegis of the IGA «Ukrainian Master Groom» 2019
+                        </li>
+                        <li>
+                            <span class="num-dot">1</span>
+                            Первое место в категории салонный груминг ,  класс ниспадающей шерсти  на Groomfest 2017, Киев
+                        </li>
+                        <li>
+                            <span class="num-dot">2</span>
+                            Второе место в категории фристайл International Grooming Contest  under the aegis of the IGA «Ukrainian Master Groom» 2017
+                        </li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="popup popup-review" id="reviewForm">
+	<!-- 
+		API
+		use global methods popup.open('#programs-1'), popup.close('#programs-1');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-head">
+				<h3 class="popup-review__title title-3">
+					Оставить отзыв
+				</h3>
+				<div class="popup-review__subtitle text-content">
+					(для тех кто
+					сомневается, с возможностью присоединится к
+					базовому курсу, после прохождения)
+				</div>
+			</div>
+			<div class="popup-scroll-wrap">
+				<form action="#" class="popup-review__form">
+					<div class="popup-review__items">
+						<div class="popup-review__item">
+							<input type="text" class="input" required placeholder="Имя">
+						</div>
+						<div class="popup-review__item">
+							<input type="email" class="input" required placeholder="Ваш email">
+						</div>
+						<div class="popup-review__item full-width">
+							<textarea class="textarea" placeholder="Ваш отзыв"></textarea>
+						</div>
+					</div>
+					<button class="btn-default dark">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popup popup-thank-you" id="thankYou">
+	<!-- 
+		API
+		use global methods popup.open('#thankYou'), popup.close('#thankYou');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-thank-you__content">
+				<div>
+					<div class="popup-thank-you__img">
+						<img src="img/icons/heart.svg" alt="">
+					</div>
+					<h3 class="popup-thank-you__title title-3">
+						Спасибо
+					</h3>
+					<div class="popup-thank-you__text text-content">
+						Ваша заявка принята мы свяжемся с вами в течении 24 часов 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="popup popup-gallery" id="gallery-1">
+    <!-- 
+		API
+		use global methods popup.open('#mainMenu'), popup.close('#mainMenu');
+	 -->
+
+    <div class="popup_body">
+        <div class="popup-close close-popup">
+            <img class="img-svg" src="img/icons/close.svg" alt="">
+        </div>
+        <div class="popup_content container">
+            <div class="popup-gallery__slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="video">
+                                <video class="video__payer" playsinline 
+                                    crossorigin="anonymous" preload="false"
+                                    poster="img/photo/gallery-img-1.jpg">
+                                    <source src="img/shrek.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__control">
+                                    <div class="video__play">
+                                        <img src="img/icons/play.svg" alt="play" class="img-svg">
+                                    </div>
+                                    <div class="video__pause">
+                                        <img src="img/icons/pause.svg" alt="play" class="img-svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="video">
+                                <video class="video__payer" playsinline 
+                                    crossorigin="anonymous" preload="false"
+                                    poster="img/photo/gallery-img-1.jpg">
+                                    <source src="img/videoForTest.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__control">
+                                    <div class="video__play">
+                                        <img src="img/icons/play.svg" alt="play" class="img-svg">
+                                    </div>
+                                    <div class="video__pause">
+                                        <img src="img/icons/pause.svg" alt="play" class="img-svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="popup-gallery__img ibg">
+                                <img src="img/photo/gallery-img-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="popup-gallery__img ibg">
+                                <img src="img/photo/gallery-img-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="popup-gallery__img ibg">
+                                <img src="img/photo/gallery-img-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-gallery__controls">
+                    <div class="swiper-pagination"></div>
+                    <div class="popup-gallery__btn-group ">
+                        <div class="popup-gallery__btn popup-gallery__btn-prev hover">
+                            <img src="img/icons/chevron-left.svg" alt="">
+                        </div>
+                        <div class="popup-gallery__btn popup-gallery__btn-next hover">
+                            <img src="img/icons/chevron-right.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-gallery" id="gallery-2">
+    <!-- 
+		API
+		use global methods popup.open('#mainMenu'), popup.close('#mainMenu');
+	 -->
+
+    <div class="popup_body">
+        <div class="popup-close close-popup">
+            <img class="img-svg" src="img/icons/close.svg" alt="">
+        </div>
+        <div class="popup_content container">
+            <div class="popup-gallery__slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="popup-gallery__img ibg">
+                                <img src="img/photo/gallery-img-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="video">
+                                <video class="video__payer" playsinline 
+                                    crossorigin="anonymous" preload="false"
+                                    poster="img/photo/gallery-img-1.jpg">
+                                    <source src="img/shrek.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__control">
+                                    <div class="video__play">
+                                        <img src="img/icons/play.svg" alt="play" class="img-svg">
+                                    </div>
+                                    <div class="video__pause">
+                                        <img src="img/icons/pause.svg" alt="play" class="img-svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="video">
+                                <video class="video__payer" playsinline 
+                                    crossorigin="anonymous" preload="false"
+                                    poster="img/photo/gallery-img-1.jpg">
+                                    <source src="img/videoForTest.mp4" type="video/mp4">
+                                </video>
+                                <div class="video__control">
+                                    <div class="video__play">
+                                        <img src="img/icons/play.svg" alt="play" class="img-svg">
+                                    </div>
+                                    <div class="video__pause">
+                                        <img src="img/icons/pause.svg" alt="play" class="img-svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="popup-gallery__img ibg">
+                                <img src="img/photo/gallery-img-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="popup-gallery__img ibg">
+                                <img src="img/photo/gallery-img-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-gallery__controls">
+                    <div class="swiper-pagination"></div>
+                    <div class="popup-gallery__btn-group ">
+                        <div class="popup-gallery__btn popup-gallery__btn-prev hover">
+                            <img src="img/icons/chevron-left.svg" alt="">
+                        </div>
+                        <div class="popup-gallery__btn popup-gallery__btn-next hover">
+                            <img src="img/icons/chevron-right.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+</body>
+
+</html>
