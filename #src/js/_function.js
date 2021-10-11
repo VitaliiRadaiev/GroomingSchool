@@ -205,12 +205,16 @@ if(anchors.length) {
 	//	var elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
 		let id = anchor.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
 		anchor.addEventListener('click', (e) => {
-			e.preventDefault();
+
 			let el = document.getElementById(id);
-			window.scrollTo({
-				top: el.offsetTop,
-				behavior: 'smooth',
-			})
+			if(el) {
+				e.preventDefault();
+				window.scrollTo({
+					top: el.offsetTop,
+					behavior: 'smooth',
+				})
+			}
+
 		})
 	})
 }

@@ -63,13 +63,17 @@ window.addEventListener('load', function () {
 		items.forEach(item => {
 			let id = item.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
 			item.addEventListener('click', (e) => {
-				e.preventDefault();
+
 				let el = document.getElementById(id);
-				window.scrollTo({
-					top: el.offsetTop - 40,
-					behavior: 'smooth',
-				})
-				popup.close('#mainMenu');
+
+				if(el) {
+					e.preventDefault();
+					window.scrollTo({
+						top: el.offsetTop - 40,
+						behavior: 'smooth',
+					})
+					popup.close('#mainMenu');
+				}
 			})
 		})
 

@@ -233,12 +233,16 @@ if(anchors.length) {
 	//	var elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
 		let id = anchor.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
 		anchor.addEventListener('click', (e) => {
-			e.preventDefault();
+
 			let el = document.getElementById(id);
-			window.scrollTo({
-				top: el.offsetTop,
-				behavior: 'smooth',
-			})
+			if(el) {
+				e.preventDefault();
+				window.scrollTo({
+					top: el.offsetTop,
+					behavior: 'smooth',
+				})
+			}
+
 		})
 	})
 };
@@ -680,13 +684,17 @@ let sliderData = new Swiper(instagramSlider, {
 		items.forEach(item => {
 			let id = item.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
 			item.addEventListener('click', (e) => {
-				e.preventDefault();
+
 				let el = document.getElementById(id);
-				window.scrollTo({
-					top: el.offsetTop - 40,
-					behavior: 'smooth',
-				})
-				popup.close('#mainMenu');
+
+				if(el) {
+					e.preventDefault();
+					window.scrollTo({
+						top: el.offsetTop - 40,
+						behavior: 'smooth',
+					})
+					popup.close('#mainMenu');
+				}
 			})
 		})
 
