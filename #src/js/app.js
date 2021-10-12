@@ -4,7 +4,7 @@ let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return
 
 
 window.addEventListener('load', function () {
-	
+
 	document.body.classList.add('is-load');
 
 	// ==== ADD PADDING-TOP ================================
@@ -12,16 +12,16 @@ window.addEventListener('load', function () {
 		let wrapper = document.querySelector('._padding-top');
 		if (wrapper) {
 			let header = document.querySelector('.header');
-			if(header) {
+			if (header) {
 				const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
 				setPedding();
 				let id = setInterval(setPedding, 200);
 				setTimeout(() => {
 					clearInterval(id);
-				},1000)
+				}, 1000)
 				window.addEventListener('resize', setPedding);
 			}
-			
+
 		}
 	}
 	// ==== AND ADD PADDING-TOP ================================
@@ -37,7 +37,7 @@ window.addEventListener('load', function () {
 
 
 	let buttonsScrollTop = document.querySelectorAll('.btn-scroll-top');
-	if(buttonsScrollTop.length) {
+	if (buttonsScrollTop.length) {
 		buttonsScrollTop.forEach(btn => {
 			btn.addEventListener('click', () => {
 				window.scrollTo({
@@ -58,7 +58,7 @@ window.addEventListener('load', function () {
 	function menuItemsHandler() {
 		let items = document.querySelectorAll('.popup-menu__list-link');
 
-		if(!items.length) return
+		if (!items.length) return
 
 		items.forEach(item => {
 			let id = item.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
@@ -66,7 +66,7 @@ window.addEventListener('load', function () {
 
 				let el = document.getElementById(id);
 
-				if(el) {
+				if (el) {
 					e.preventDefault();
 					window.scrollTo({
 						top: el.offsetTop - 40,
@@ -82,7 +82,7 @@ window.addEventListener('load', function () {
 				items.forEach(item => {
 					let hrefData = item.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
 
-					if(id === hrefData) {
+					if (id === hrefData) {
 						item.classList.add('active');
 					} else {
 						item.classList.remove('active');
@@ -94,26 +94,29 @@ window.addEventListener('load', function () {
 
 	const menuItems = menuItemsHandler();
 
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach(entry => {
-			// console.log(entry.target.offsetTop);
-			// console.log(entry.target.id);
-			if(entry.isIntersecting) {
-				if(entry.target.id) {
-					menuItems.setActiveItem(entry.target.id);
+	let mainSections = document.querySelectorAll('main > section');
+	if (mainSections.length) {
+		let header = document.querySelector('.header')
+
+		window.addEventListener('scroll', () => {
+			mainSections.forEach(section => {
+				let top = section.getBoundingClientRect().top;
+				let bottom = section.getBoundingClientRect().bottom;
+				let halfHeightOfWindow = (document.documentElement.clientHeight - header.clientHeight) / 2;
+
+				if (top < halfHeightOfWindow && bottom >= halfHeightOfWindow) {
+					if(section.id) {
+						menuItems.setActiveItem(section.id);
+					}
 				}
-			}
+
+			})
 		})
-	}, {threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]});
-
-	document.querySelectorAll('main > section').forEach(
-		(section) => observer.observe(section)
-	)
-
+	}
 });
 
-window.addEventListener('DOMContentLoaded', function() {
-	if(isMobile.any()) {
+window.addEventListener('DOMContentLoaded', function () {
+	if (isMobile.any()) {
 		document.body.classList.add('_is-mobile');
 	}
 
