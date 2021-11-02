@@ -77,7 +77,7 @@ defer
         <nav class="header__menu menu">
             <ul class="menu__list">
                 <li >
-                    <a href="index.html#programs" class="menu__link anchor">Курсы</a>
+                    <a href="#" class="menu__link anchor">Курсы</a>
                 </li>
                 <li>
                     <a href="index.html#advantages" class="menu__link anchor">Философия</a>
@@ -654,13 +654,13 @@ defer
 						</a>
 					</li>
 					<li>
-						<div class="team__card _anim fadeInUp">
+						<a href="#vacancy" class="team__card _anim fadeInUp popup-link">
 							<div class="team__card-photo ibg">
 								<span>
 									Здесь можете быть вы
 								</span>
 							</div>
-						</div>
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -818,7 +818,7 @@ defer
 							</div>
 						</div>
 					</div>
-					<a href="#" class="btn-default _anim fadeInUp">Добавить отзыв</a>
+					<a href="#reviewForm" class="btn-default popup-link _anim fadeInUp">Добавить отзыв</a>
 				</div>
 			</div>
 		</section>
@@ -1007,7 +1007,7 @@ defer
 								</a>
 							</li>
 							<li>
-								<a href="index.html#testimonials" class="popup-menu__list-link">
+								<a href="#" class="popup-menu__list-link">
 									Обратная связь
 								</a>
 							</li>
@@ -2369,6 +2369,83 @@ defer
         </div>
     </div>
 </div>
+	<div class="popup popup-vacancy" id="vacancy">
+	<!-- 
+		API
+		use global methods popup.open('#vacancy'), popup.close('#programs-1');
+	 -->
+
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img class="img-svg" src="img/icons/close.svg" alt="">
+		</div>
+		<div class="popup_content">
+			<div class="popup-head">
+				<h3 class="popup-programs__title title-3">
+					Напиши нам.
+				</h3>
+				<div class="popup-programs__subtitle text-content">
+					(для тех кто
+					сомневается, с возможностью присоединится к
+					нашей команде)
+				</div>
+			</div>
+			<div class="popup-scroll-wrap">
+				<div class="popup-team__text-content  text-content">
+                    <ul>
+                        <li>
+                            <span class="num-dot">1</span>
+                            Профессиональное развитие в лидирующей компании.
+                        </li>
+                        <li>
+                            <span class="num-dot">2</span>
+                            Уникальная корпоративная культура. 
+                        </li>
+                        <li>
+                            <span class="num-dot">3</span>
+                            Непрерывное усовершенствование.
+                        </li>
+                        <li>
+                            <span class="num-dot">4</span>
+                            Возможность предлагать и реализовывать свои идеи.
+                        </li>
+                        <li>
+                            <span class="num-dot">5</span>
+                            Молодежный и прогрессивный коллектив. 
+                        </li>
+                        <li>
+                            <span class="num-dot">6</span>
+                            Четкая система карьерного роста в компании. 
+                        </li>
+                        <li>
+                            <span class="num-dot">7</span>
+                            Реализуй свои умения в Голландии.
+                        </li>
+                    </ul>
+                </div>
+                <form action="#" class="popup-review__form">
+					<div class="popup-review__items">
+						<div class="popup-review__item">
+							<input type="text" class="input" required placeholder="Имя">
+						</div>
+						<div class="popup-review__item">
+							<input type="text" class="input _mask" required placeholder="Контактный номер">
+						</div>
+						<div class="popup-review__item full-width">
+							<input type="email" class="input" required placeholder="Ваш email">
+						</div>
+						<div class="popup-review__item full-width">
+							<textarea class="textarea" placeholder="Комментарий"></textarea>
+						</div>
+					</div>
+					<button class="btn-default dark">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/jQueryScripts.min.js"></script>

@@ -549,13 +549,13 @@
 						</a>
 					</li>
 					<li>
-						<div class="team__card _anim fadeInUp">
+						<a href="#vacancy" class="team__card _anim fadeInUp popup-link">
 							<div class="team__card-photo ibg">
 								<span>
 									Здесь можете быть вы
 								</span>
 							</div>
-						</div>
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -713,7 +713,7 @@
 							</div>
 						</div>
 					</div>
-					<a href="#" class="btn-default _anim fadeInUp">Добавить отзыв</a>
+					<a href="#reviewForm" class="btn-default popup-link _anim fadeInUp">Добавить отзыв</a>
 				</div>
 			</div>
 		</section>
@@ -847,6 +847,7 @@
 	@@include('common/popup/_popupTeam.html',{})
 	@@include('common/popup/_popupReviewForm.html',{})
 	@@include('common/popup/_popupGallery.html',{})
+	@@include('common/popup/_popupVacancy.html',{})
 
 	@@include('_js-bottom.html',{})
 </body>

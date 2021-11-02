@@ -90,7 +90,7 @@
                 }
             }
 
-            &:not(:last-child) {
+           
                 & .team__card {
                     @media (min-width: 992px) {
                         &:hover {
@@ -100,7 +100,7 @@
                         }
                     }
                 }
-            }
+            
         }
     }
 

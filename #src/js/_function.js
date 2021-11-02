@@ -202,7 +202,8 @@ setCounterAnim();
 let anchors = document.querySelectorAll('.anchor');
 if(anchors.length) {
 	anchors.forEach(anchor => {
-	//	var elementClick = $(this).attr("href").match(/#\w+$/gi).join(''); 
+		if(!anchor.getAttribute('href').match(/#\w+$/gi)) return;
+		
 		let id = anchor.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
 		anchor.addEventListener('click', (e) => {
 

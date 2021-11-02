@@ -5823,15 +5823,15 @@ textarea {
   position: relative;
 }
 
-.language:hover .language__title {
+.language .language__list > .menu-item:hover > a {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.language:hover .language__list {
+.language .language__list > .menu-item:hover > .sub-menu {
   display: block;
 }
 
-.language__title {
+.language .language__list > .menu-item > a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5842,9 +5842,11 @@ textarea {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  color: #ffffff;
+  pointer-events: none;
 }
 
-.language__title:after {
+.language .language__list > .menu-item > a:after {
   content: "";
   display: inline-block;
   height: 18px;
@@ -5856,7 +5858,7 @@ textarea {
   margin-left: 1px;
 }
 
-.language__list {
+.language .language__list > .menu-item > .sub-menu {
   position: absolute;
   top: 100%;
   min-width: 100%;
@@ -5866,13 +5868,17 @@ textarea {
           animation: lngSlideUp 0.3s ease;
 }
 
-.language__list a {
+.language .language__list > .menu-item > .sub-menu a {
   color: #333333;
   padding: 7.5px;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   display: block;
+}
+
+.language .language__list > .menu-item .wpml-ls-display {
+  display: none;
 }
 
 @-webkit-keyframes lngSlideUp {
@@ -6706,6 +6712,10 @@ textarea {
   width: var(--size);
 }
 
+.sbi_header_link {
+  color: #fff;
+}
+
 .contact {
   padding: 100px 0;
 }
@@ -6792,12 +6802,22 @@ textarea {
 }
 
 .popup-gallery__slider .swiper-slide {
-  height: 650px;
+  position: relative;
+  height: 0;
+  padding-bottom: 55%;
   pointer-events: none;
 }
 
 .popup-gallery__slider .swiper-slide.swiper-slide-active {
   pointer-events: auto;
+}
+
+.popup-gallery__slider .swiper-slide .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .popup-gallery__slider .swiper-pagination {
@@ -6812,6 +6832,9 @@ textarea {
 .popup-gallery__img {
   height: 100%;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .popup-gallery__controls {
@@ -6862,6 +6885,10 @@ textarea {
 
 .popup-gallery__btn-prev {
   margin-right: 28px;
+}
+
+.popup-vacancy .popup-team__text-content {
+  margin-bottom: 50px;
 }
 
 .video {
@@ -7297,7 +7324,7 @@ textarea {
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  .language__list a:hover {
+  .language .language__list > .menu-item > .sub-menu a:hover {
     background-color: rgba(51, 51, 51, 0.2);
   }
 
@@ -7321,7 +7348,7 @@ textarea {
     margin-right: 120px;
   }
 
-  .team__list > li:not(:last-child) .team__card:hover .team__card-photo {
+  .team__list > li .team__card:hover .team__card-photo {
     -webkit-box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
   }
@@ -7813,6 +7840,7 @@ textarea {
   }
 
   .popup-gallery__slider .swiper-slide {
+    padding-bottom: 0;
     height: 400px;
   }
 

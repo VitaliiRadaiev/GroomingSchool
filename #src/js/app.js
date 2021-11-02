@@ -61,25 +61,30 @@ window.addEventListener('load', function () {
 		if (!items.length) return
 
 		items.forEach(item => {
-			let id = item.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
-			item.addEventListener('click', (e) => {
+			if(item.getAttribute('href').match(/#\w+$/gi)) {
+				let	id = item.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
+				
+				item.addEventListener('click', (e) => {
 
-				let el = document.getElementById(id);
-
-				if (el) {
-					e.preventDefault();
-					window.scrollTo({
-						top: el.offsetTop - 40,
-						behavior: 'smooth',
-					})
-					popup.close('#mainMenu');
-				}
-			})
+					let el = document.getElementById(id);
+	
+					if (el) {
+						e.preventDefault();
+						window.scrollTo({
+							top: el.offsetTop - 40,
+							behavior: 'smooth',
+						})
+						popup.close('#mainMenu');
+					}
+				})
+			}
 		})
 
 		return {
 			setActiveItem(id) {
 				items.forEach(item => {
+					if(!item.getAttribute('href').match(/#\w+$/gi)) return;
+
 					let hrefData = item.getAttribute('href').match(/#\w+$/gi).join('').replace('#', '');
 
 					if (id === hrefData) {
@@ -113,6 +118,44 @@ window.addEventListener('load', function () {
 			})
 		})
 	}
+
+	//Placeholers
+let inputs = document.querySelectorAll('input');
+inputs_init(inputs);
+
+function inputs_init(inputs) {
+	if (inputs.length > 0) {
+		for (let index = 0; index < inputs.length; index++) {
+			const input = inputs[index];
+
+			if (input.classList.contains('_mask')) {
+				//'+7(999) 999 9999'
+				//'+38(999) 999 9999'
+				//'+375(99)999-99-99'
+				input.classList.add('_mask');
+				Inputmask('+9(999) 999 9999', {
+					//"placeholder": '',
+					clearIncomplete: true,
+					clearMaskOnLostFocus: true,
+					onincomplete: function () {
+						//input_clear_mask(input, input_g_value);
+					}
+				}).mask(input);
+			}
+			if (input.classList.contains('_date')) {
+				datepicker(input, {
+					formatter: (input, date, instance) => {
+						const value = date.toLocaleDateString()
+						input.value = value
+					},
+					onSelect: function (input, instance, date) {
+						input_focus_add(input.el);
+					}
+				});
+			}
+		}
+	}
+}
 });
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -139,5 +182,12 @@ window.addEventListener('DOMContentLoaded', function () {
 			document.querySelector('body').classList.add('no-webp');
 		}
 	});
+
+	let instagramImgAll = document.querySelectorAll('.sbi_photo_wrap');
+	if(instagramImgAll.length) {
+		instagramImgAll.forEach(img => {
+			img.classList.add('_anim', 'flipInX');
+		})
+	}
 
 });
