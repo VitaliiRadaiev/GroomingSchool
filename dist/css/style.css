@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 @font-face {
   font-family: "CircularStd-Black";
   font-display: swap;
@@ -449,35 +447,35 @@ template {
 }
 
 .icon-chevron-up:before {
-  content: "";
+  content: "\e900";
 }
 
 .icon-chevron-down1:before {
-  content: "";
+  content: "\e904";
 }
 
 .icon-arrow-right-black:before {
-  content: "";
+  content: "\e905";
 }
 
 .icon-play_circle_filled:before {
-  content: "";
+  content: "\e901";
 }
 
 .icon-pause_circle_filled:before {
-  content: "";
+  content: "\e902";
 }
 
 .icon-star-empty1:before {
-  content: "";
+  content: "\e9d8";
 }
 
 .icon-star-full1:before {
-  content: "";
+  content: "\e9da";
 }
 
 .icon-chevron-down:before {
-  content: "";
+  content: "\e903";
 }
 
 /**
@@ -5123,7 +5121,7 @@ button.swiper-pagination-bullet {
 .popup-programs__sub-menu-title:before {
   position: absolute;
   font-family: "icomoon";
-  content: "";
+  content: "\e905";
   top: 0px;
   left: 11px;
   font-size: 0.8em;
@@ -5488,7 +5486,7 @@ textarea {
 
 .btn-default.with-errow:after {
   font-family: "icomoon";
-  content: "";
+  content: "\e905";
   margin-left: 21px;
   display: inline-block;
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -5964,7 +5962,7 @@ textarea {
 
 .btn-scroll-top:before {
   font-family: "icomoon";
-  content: "";
+  content: "\e900";
   color: #fff;
   font-size: 10px;
   -webkit-transition: all 0.3s ease;
@@ -6202,7 +6200,7 @@ textarea {
 .advantages__decor-3 {
   position: absolute;
   z-index: 1;
-  top: 72%;
+  top: 64%;
   left: 50%;
 }
 
@@ -6962,9 +6960,9 @@ textarea {
           justify-content: center;
   font-size: 20px;
   text-transform: uppercase;
-  color: #4227b9;
+  color: rgb(66, 39, 185);
   padding: 8px 15px;
-  border: 2px solid #4227b9;
+  border: 2px solid rgb(66, 39, 185);
   background: #fff;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -6986,7 +6984,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #4227b9;
+  background: rgb(66, 39, 185);
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -7014,7 +7012,7 @@ textarea {
 }
 
 ._puls-decor {
-  background: #4227b9;
+  background: rgb(66, 39, 185);
   border-radius: 50%;
   -webkit-animation: pulsAnim 0.7s ease-out forwards;
           animation: pulsAnim 0.7s ease-out forwards;
