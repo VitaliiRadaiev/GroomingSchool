@@ -6,10 +6,7 @@ let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return
 
 window.addEventListener('load', function () {
 
-	document.body.classList.add('is-load');
-
 	@@include('_function.js');
-	@@include('../common/popup/popup.js');
 	@@include('../common/popup/popup-gallery.js');
 	@@include('../common/video/video.js');
 	@@include('../common/instagram/instagram.js');
@@ -19,6 +16,7 @@ window.addEventListener('load', function () {
 });
 
 window.addEventListener('DOMContentLoaded', function () {
+	document.body.classList.add('is-load');
 		// ==== ADD PADDING-TOP ================================
 		{
 			let wrapper = document.querySelector('._padding-top');
@@ -39,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		// ==== AND ADD PADDING-TOP ================================
 	
 		@@include('../common/header/header.js');
-
+		@@include('../common/popup/popup.js');
 
 
 

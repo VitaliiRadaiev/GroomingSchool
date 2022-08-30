@@ -6121,6 +6121,20 @@ textarea {
 
 .programs__list > li {
   border-bottom: 2px solid #545a5c;
+  position: relative;
+}
+
+.programs__list > li > img {
+  position: absolute;
+  width: calc(100% + 32px);
+  height: auto;
+  pointer-events: none;
+  top: 50%;
+  left: -32px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 3;
 }
 
 .programs__list-item {
@@ -7448,6 +7462,15 @@ textarea {
     display: none;
   }
 
+  .programs__decor-2 {
+    top: 104%;
+    left: -94px;
+  }
+
+  .programs .head__content {
+    margin-left: 0;
+  }
+
   .advantages__item-img {
     width: 280px;
     height: 280px;
@@ -7936,6 +7959,11 @@ textarea {
 
   .programs__decor-1 img {
     width: 75px;
+  }
+
+  .programs__list > li > img {
+    width: calc(100% + 6px);
+    left: -6px;
   }
 
   .programs__list-item {
